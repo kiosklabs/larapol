@@ -154,9 +154,7 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        App\Providers\UpworkServiceProvider::class,
-
+        App\Providers\RouteServiceProvider::class
     ],
 
     /*
@@ -178,6 +176,7 @@ return [
         'Blade' => Illuminate\Support\Facades\Blade::class,
         'Cache' => Illuminate\Support\Facades\Cache::class,
         'Config' => Illuminate\Support\Facades\Config::class,
+        'ConfigWriter' => Larapack\ConfigWriter\Repository::class,
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
         'DB' => Illuminate\Support\Facades\DB::class,

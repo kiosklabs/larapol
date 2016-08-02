@@ -1,11 +1,9 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/shop-app.html",
+  "shell": "src/my-app.html",
   "fragments": [
-    "src/shop-list.html",
-    "src/shop-detail.html",
-    "src/shop-cart.html",
-    "src/shop-checkout.html",
-    "src/lazy-resources.html"
+    "src/my-view1.html",
+    "src/my-view2.html",
+    "src/my-view3.html"
   ]
 }
