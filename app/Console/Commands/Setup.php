@@ -40,11 +40,12 @@ class Setup extends Command
     public function handle()
     {
         $this->comment(PHP_EOL.'Laravel Polymer Starter Kit: Configuration and Setup');
-        $config = new ConfigWriter('blog');
+
+        $config = new ConfigWriter('setup');
 
         // Blog Title
         $appTitle = $this->ask('Polymer App name:');
-        $this->title($blogTitle, $config);
+        $this->title($appTitle, $config);
         $this->info(PHP_EOL.'Success! The app name has been saved.');
 
         // Blog Subtitle

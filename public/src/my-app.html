@@ -83,11 +83,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
-
-        <app-header condenses reveals effects="waterfall">
-          <app-toolbar>
-            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div title>My App</div>
+        <app-header style="height: 96px;" condenses fixed effects="waterfall">
+          <app-toolbar style="height: 64px;">
+            <div title>App name</div>
           </app-toolbar>
         </app-header>
 
@@ -117,6 +115,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           observer: '_pageChanged'
         },
 
+        session: {
+          type: String,
+          reflectToAttribute: true,
+          observer: '_sessionChanged'
+        }
+
       },
 
       observers: [
@@ -131,6 +135,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // load page import on demand.
         this.importHref(
           this.resolveUrl('my-' + page + '.html'), null, null, true);
+      },
+
+      _sessionChanged: function(page) {
+        // resolve session
+        console.log('session changed');
       }
 
     });
